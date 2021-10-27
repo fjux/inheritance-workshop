@@ -1,7 +1,9 @@
-package org.example.model;
+package org.example.service;
+
+import org.example.model.Product;
 
 public interface VendingMachine {
-    void addCurrency(double amount);
+    void addCurrency(int amount);
     int getBalance();
     Product request(int id);
     int endSession();

@@ -3,11 +3,12 @@ package org.example.model;
 public class Armor implements Product{
     private int id;
     private String productName;
-    private double price;
+    private int price;
     private String description;
     private String size;
 
-    public Armor(String productName, double price, String description, String size) {
+    public Armor(int id, String productName, int price, String description, String size) {
+        this.id = id;
         this.productName = productName;
         this.price = price;
         this.description = description;
@@ -21,7 +22,7 @@ public class Armor implements Product{
 
     @Override
     public String use() {
-        return "Make sure " + productName + " has your size " + size + " and equip piece of armor! \nIf the damage type is a magical...\nWally's Vending Machines Incorporated (TM) can't be held responsible for function of bought product";
+        return "Make sure " + productName + " has your size (" + size + ") and equip piece of armor! \nIf the damage type is a magical...\nWally's Vending Machines Incorporated (TM) can't be held responsible for function of bought product";
     }
 
     @Override
@@ -40,12 +41,12 @@ public class Armor implements Product{
     }
 
     @Override
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
     @Override
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

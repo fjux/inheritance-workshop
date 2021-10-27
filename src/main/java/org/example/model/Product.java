@@ -6,8 +6,8 @@ public interface Product {
      int getId();
      String getProductName();
      void setProductName(String productName);
-     double getPrice();
-     void setPrice(double price);
+     int getPrice();
+     void setPrice(int price);
 
 
 

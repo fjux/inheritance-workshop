@@ -3,11 +3,12 @@ package org.example.model;
 public class Jewelery implements Product{
     private int id;
     private String productName;
-    private double price;
+    private int price;
     private String description;
     private String enhancement;
 
-    public Jewelery(String productName, double price, String description, String enhancement) {
+    public Jewelery(int id, String productName, int price, String description, String enhancement) {
+        this.id = id;
         this.productName = productName;
         this.price = price;
         this.description = description;
@@ -40,12 +41,12 @@ public class Jewelery implements Product{
     }
 
     @Override
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
     @Override
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }
